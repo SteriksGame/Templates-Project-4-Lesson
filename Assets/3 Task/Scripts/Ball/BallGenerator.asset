@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 275f8321933ab7f409b0f2964f6c1b95, type: 3}
+  m_Name: BallGenerator
+  m_EditorClassIdentifier: 
+  ballCollection:
+  - {fileID: 5182188251640931680, guid: cad8213c78378224ca943dacc576a403, type: 3}
+  - {fileID: -7359010079271501827, guid: 9b9e87c4b500cf849a6465e940b59e7a, type: 3}
+  - {fileID: 5538358104321483434, guid: a8368d244256d8d48b98856ec6c7a53a, type: 3}

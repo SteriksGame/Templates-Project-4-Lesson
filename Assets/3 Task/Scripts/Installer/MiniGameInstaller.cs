@@ -21,7 +21,7 @@ public class MiniGameInstaller : MonoInstaller
         BindLevelData();
     }
 
-    private void BindMiniGameHUD() => Container.Bind<MiniGameResultMenuHUD>().FromInstance(_resultHUD).AsSingle();
+    private void BindMiniGameHUD() => Container.BindInstance(_resultHUD);
 
     private void BindGameModeController()
     {
@@ -39,6 +39,6 @@ public class MiniGameInstaller : MonoInstaller
 
     private void BindLevelData()
     {
-        Container.Bind<LevelLoadingData>().FromInstance(_levelLoadingData);
+        Container.Bind<LevelLoadingData>().FromInstance(_levelLoadingData).AsTransient();
     }
 }

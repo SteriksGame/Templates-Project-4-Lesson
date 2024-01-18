@@ -10,20 +10,21 @@
 
 Биндинг:
 1) Бинд класса: Container.Bind<класс>()
-2) Бинд класса со всеми его интерфейсами: Container.BindInterfacesAndSelfTo<класс>()
+2) Бинд класса под видом: Contaner.Bind(typeof(составные части), ...).To<класс>()
+3) Бинд класса со всеми его интерфейсами: Container.BindInterfacesAndSelfTo<класс>()
 
-3) Бинд класса по конструктору: Container.Bind<класс>().FromNew()
-4) Бинд класса по конструктору с параметрами: Container.Bind<класс>().FromNew().AsSingle().WithArguments(аргументы);
-5) Бинд класса по инстансу: Container.Bind<класс>().FromInstance(инстанс)
-6) Быстрый бинд класса по инстансу: Container.BindInstance(инстанс);
+4) Бинд класса по конструктору: Container.Bind<класс>().FromNew()
+5) Бинд класса по конструктору с параметрами: Container.Bind<класс>().FromNew().AsSingle().WithArguments(аргументы);
+6) Бинд класса по инстансу: Container.Bind<класс>().FromInstance(инстанс)
+7) Быстрый бинд класса по инстансу: Container.BindInstance(инстанс);
 
-7) Бинд одной единственной сущности класса: Container.Bind<класс>().FromNew().AsSingle();
-8) Бинд множества сущностей класса для каждого запроса: Container.Bind<класс>().FromNew().AsTransient();
+8) Бинд одной единственной сущности класса: Container.Bind<класс>().FromNew().AsSingle();
+9) Бинд множества сущностей класса для каждого запроса: Container.Bind<класс>().FromNew().AsTransient();
 
-9) Бинд на одну конкретную сущность: .WhenInjectedInto<класс>();
+10) Бинд на одну конкретную сущность: .WhenInjectedInto<класс>();
 
-10) Динамическое создание через контейнер в моно инсталлере: Класс экземпляр = Container.InstantiatePrefabForComponent<класс>(параметры);
-11) Для фабрики в конструкторе прокидываем DiContainer и через него вызываем методы из пункта 10
+11) Динамическое создание через контейнер в моно инсталлере: Класс экземпляр = Container.InstantiatePrefabForComponent<класс>(параметры);
+12) Для фабрики в конструкторе прокидываем DiContainer и через него вызываем методы из пункта 10
 
 Полезные интерфейсы:
 1) IInitializable -> Имитирует метод Start()
